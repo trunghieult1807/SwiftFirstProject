@@ -16,6 +16,9 @@ target '[Project] BookFinder' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod "BmoImageLoader"
+  pod 'Firebase/Database'
 
   target '[Project] BookFinderTests' do
     inherit! :search_paths

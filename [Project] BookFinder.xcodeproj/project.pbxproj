@@ -26,6 +26,14 @@
 		1840DD6024038C3F00473EC3 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840DD5F24038C3F00473EC3 /* Meal.swift */; };
 		1840DD632403999C00473EC3 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840DD622403999C00473EC3 /* MealTableViewCell.swift */; };
 		1840DD652403A18B00473EC3 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840DD642403A18B00473EC3 /* MealTableViewController.swift */; };
+		18508FCB24069D8A0041CE11 /* MainSlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FC724069D890041CE11 /* MainSlideMenuViewController.swift */; };
+		18508FCC24069D8A0041CE11 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FC824069D890041CE11 /* DatePickerViewController.swift */; };
+		18508FCD24069D8A0041CE11 /* Infor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FC924069D890041CE11 /* Infor.swift */; };
+		18508FCE24069D8A0041CE11 /* CropAreaImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FCA24069D8A0041CE11 /* CropAreaImageView.swift */; };
+		18508FD52406A0460041CE11 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD02406A0440041CE11 /* ExtensionDate.swift */; };
+		18508FD62406A0460041CE11 /* ExtensionTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD12406A0450041CE11 /* ExtensionTimeInterval.swift */; };
+		18508FD82406A0460041CE11 /* ExtensionhourlyDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD32406A0450041CE11 /* ExtensionhourlyDay.swift */; };
+		18508FD92406A0460041CE11 /* ExtensionUIimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD42406A0460041CE11 /* ExtensionUIimageView.swift */; };
 		1FB09D2CC96FDA8979CC8DCF /* Pods__Project__BookFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5ED7F3424BE23B686BF999 /* Pods__Project__BookFinderTests.framework */; };
 		20FB2C0FD5C52A489571788E /* Pods__Project__BookFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C194718516F67B61BC884D2 /* Pods__Project__BookFinder.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +73,14 @@
 		1840DD5F24038C3F00473EC3 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		1840DD622403999C00473EC3 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		1840DD642403A18B00473EC3 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		18508FC724069D890041CE11 /* MainSlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSlideMenuViewController.swift; sourceTree = "<group>"; };
+		18508FC824069D890041CE11 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		18508FC924069D890041CE11 /* Infor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Infor.swift; sourceTree = "<group>"; };
+		18508FCA24069D8A0041CE11 /* CropAreaImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropAreaImageView.swift; sourceTree = "<group>"; };
+		18508FD02406A0440041CE11 /* ExtensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
+		18508FD12406A0450041CE11 /* ExtensionTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTimeInterval.swift; sourceTree = "<group>"; };
+		18508FD32406A0450041CE11 /* ExtensionhourlyDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionhourlyDay.swift; sourceTree = "<group>"; };
+		18508FD42406A0460041CE11 /* ExtensionUIimageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIimageView.swift; sourceTree = "<group>"; };
 		1C194718516F67B61BC884D2 /* Pods__Project__BookFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__Project__BookFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C823C4E8208124CCE0C3732 /* Pods-[Project] BookFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[Project] BookFinder.release.xcconfig"; path = "Target Support Files/Pods-[Project] BookFinder/Pods-[Project] BookFinder.release.xcconfig"; sourceTree = "<group>"; };
 		918DB9D454FD754D59DCB78E /* Pods-[Project] BookFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[Project] BookFinder.debug.xcconfig"; path = "Target Support Files/Pods-[Project] BookFinder/Pods-[Project] BookFinder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +134,8 @@
 				1840DCF423FBA25A00473EC3 /* AppDelegate.swift */,
 				1840DCF623FBA25A00473EC3 /* SceneDelegate.swift */,
 				1840DD6124038C7A00473EC3 /* Test */,
+				18508FCF2406A0250041CE11 /* Ulities + Extension */,
+				18508FC624069D560041CE11 /* LoveTracker */,
 				1840DD5823FEDE1B00473EC3 /* FoodTracker */,
 				1840DD2523FBC86500473EC3 /* LoginScreen */,
 				1840DD2223FBBC3300473EC3 /* Helper */,
@@ -177,6 +195,28 @@
 				1840DD5F24038C3F00473EC3 /* Meal.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		18508FC624069D560041CE11 /* LoveTracker */ = {
+			isa = PBXGroup;
+			children = (
+				18508FCA24069D8A0041CE11 /* CropAreaImageView.swift */,
+				18508FC824069D890041CE11 /* DatePickerViewController.swift */,
+				18508FC924069D890041CE11 /* Infor.swift */,
+				18508FC724069D890041CE11 /* MainSlideMenuViewController.swift */,
+			);
+			path = LoveTracker;
+			sourceTree = "<group>";
+		};
+		18508FCF2406A0250041CE11 /* Ulities + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				18508FD02406A0440041CE11 /* ExtensionDate.swift */,
+				18508FD32406A0450041CE11 /* ExtensionhourlyDay.swift */,
+				18508FD12406A0450041CE11 /* ExtensionTimeInterval.swift */,
+				18508FD42406A0460041CE11 /* ExtensionUIimageView.swift */,
+			);
+			path = "Ulities + Extension";
 			sourceTree = "<group>";
 		};
 		5C061B9A03D7AE4301BB4272 /* Pods */ = {
@@ -371,14 +411,22 @@
 				1840DD632403999C00473EC3 /* MealTableViewCell.swift in Sources */,
 				1840DD5723FECEB600473EC3 /* HomeTabBarControllerViewController.swift in Sources */,
 				1840DD652403A18B00473EC3 /* MealTableViewController.swift in Sources */,
+				18508FD62406A0460041CE11 /* ExtensionTimeInterval.swift in Sources */,
 				1840DD5C2402576600473EC3 /* RatingControl.swift in Sources */,
+				18508FCC24069D8A0041CE11 /* DatePickerViewController.swift in Sources */,
 				1840DD2B23FC385F00473EC3 /* Shadow.swift in Sources */,
 				1840DD2423FBBC6F00473EC3 /* SignInViewController.swift in Sources */,
+				18508FD52406A0460041CE11 /* ExtensionDate.swift in Sources */,
 				1840DD6024038C3F00473EC3 /* Meal.swift in Sources */,
+				18508FD82406A0460041CE11 /* ExtensionhourlyDay.swift in Sources */,
 				1840DCFF23FBA25A00473EC3 /* _Project__BookFinder.xcdatamodeld in Sources */,
 				1840DD2723FBC88600473EC3 /* SignUpViewController.swift in Sources */,
+				18508FCD24069D8A0041CE11 /* Infor.swift in Sources */,
+				18508FCB24069D8A0041CE11 /* MainSlideMenuViewController.swift in Sources */,
 				1840DCF523FBA25A00473EC3 /* AppDelegate.swift in Sources */,
+				18508FCE24069D8A0041CE11 /* CropAreaImageView.swift in Sources */,
 				1840DD2023FBBC0700473EC3 /* Utilities.swift in Sources */,
+				18508FD92406A0460041CE11 /* ExtensionUIimageView.swift in Sources */,
 				1840DCF723FBA25A00473EC3 /* SceneDelegate.swift in Sources */,
 				1840DD2123FBBC0700473EC3 /* Constants.swift in Sources */,
 				1840DD5A23FEDE5E00473EC3 /* AddEditFoodTrackerViewController.swift in Sources */,
