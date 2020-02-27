@@ -144,15 +144,27 @@ class MainSlideMenuViewController: UIViewController , DatePickerViewControllerDe
         let formatedStartDate = dateFormat.date(from: startDate!)
         let currentDate = Date()
         let components = Set<Calendar.Component>([.year, .month, .weekOfMonth, .day, .hour, .minute, .second])
-        let differenceOfDate = Calendar.current.dateComponents(components, from:  formatedStartDate!, to: currentDate)
-        dateLabel.text = String(interval(start: currentDate, end: formatedStartDate!))
-        yearDataLabel.text = differenceOfDate.year?.description
-        monthDataLabel.text = differenceOfDate.month?.description
-        weekDataLabel.text = differenceOfDate.weekOfMonth?.description
-        dayDataLabel.text = differenceOfDate.day?.description
-        hourDataLabel.text = differenceOfDate.hour?.description
-        minuteDataLabel.text = differenceOfDate.minute?.description
-        secondDataLabel.text = differenceOfDate.second?.description
+        if formatedStartDate != nil {
+            let differenceOfDate = Calendar.current.dateComponents(components, from:  formatedStartDate!, to: currentDate)
+            dateLabel.text = String(interval(start: currentDate, end: formatedStartDate!))
+            yearDataLabel.text = differenceOfDate.year?.description
+            monthDataLabel.text = differenceOfDate.month?.description
+            weekDataLabel.text = differenceOfDate.weekOfMonth?.description
+            dayDataLabel.text = differenceOfDate.day?.description
+            hourDataLabel.text = differenceOfDate.hour?.description
+            minuteDataLabel.text = differenceOfDate.minute?.description
+            secondDataLabel.text = differenceOfDate.second?.description
+        }
+        else {
+            dateLabel.text = ""
+            yearDataLabel.text = ""
+            monthDataLabel.text = ""
+            weekDataLabel.text = ""
+            dayDataLabel.text = ""
+            hourDataLabel.text = ""
+            minuteDataLabel.text = ""
+            secondDataLabel.text = ""
+        }
     }
 
     
