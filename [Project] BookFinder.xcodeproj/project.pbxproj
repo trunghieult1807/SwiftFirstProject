@@ -34,7 +34,11 @@
 		18508FD62406A0460041CE11 /* ExtensionTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD12406A0450041CE11 /* ExtensionTimeInterval.swift */; };
 		18508FD82406A0460041CE11 /* ExtensionhourlyDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD32406A0450041CE11 /* ExtensionhourlyDay.swift */; };
 		18508FD92406A0460041CE11 /* ExtensionUIimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FD42406A0460041CE11 /* ExtensionUIimageView.swift */; };
-		18508FDC24079AF30041CE11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18508FDB24079AF30041CE11 /* MapViewController.swift */; };
+		18588A09240825C600E935BD /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588A05240825C500E935BD /* PlacesTableViewController.swift */; };
+		18588A0A240825C600E935BD /* LocationsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588A06240825C600E935BD /* LocationsStorage.swift */; };
+		18588A0B240825C600E935BD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588A07240825C600E935BD /* MapViewController.swift */; };
+		18588A0C240825C600E935BD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588A08240825C600E935BD /* Location.swift */; };
+		18588A0E2408263700E935BD /* Route.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 18588A0D2408263700E935BD /* Route.gpx */; };
 		1FB09D2CC96FDA8979CC8DCF /* Pods__Project__BookFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5ED7F3424BE23B686BF999 /* Pods__Project__BookFinderTests.framework */; };
 		20FB2C0FD5C52A489571788E /* Pods__Project__BookFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C194718516F67B61BC884D2 /* Pods__Project__BookFinder.framework */; };
 /* End PBXBuildFile section */
@@ -82,7 +86,11 @@
 		18508FD12406A0450041CE11 /* ExtensionTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTimeInterval.swift; sourceTree = "<group>"; };
 		18508FD32406A0450041CE11 /* ExtensionhourlyDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionhourlyDay.swift; sourceTree = "<group>"; };
 		18508FD42406A0460041CE11 /* ExtensionUIimageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIimageView.swift; sourceTree = "<group>"; };
-		18508FDB24079AF30041CE11 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		18588A05240825C500E935BD /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		18588A06240825C600E935BD /* LocationsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsStorage.swift; sourceTree = "<group>"; };
+		18588A07240825C600E935BD /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		18588A08240825C600E935BD /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		18588A0D2408263700E935BD /* Route.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Route.gpx; sourceTree = "<group>"; };
 		1C194718516F67B61BC884D2 /* Pods__Project__BookFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__Project__BookFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C823C4E8208124CCE0C3732 /* Pods-[Project] BookFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[Project] BookFinder.release.xcconfig"; path = "Target Support Files/Pods-[Project] BookFinder/Pods-[Project] BookFinder.release.xcconfig"; sourceTree = "<group>"; };
 		918DB9D454FD754D59DCB78E /* Pods-[Project] BookFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[Project] BookFinder.debug.xcconfig"; path = "Target Support Files/Pods-[Project] BookFinder/Pods-[Project] BookFinder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,8 +143,8 @@
 			children = (
 				1840DCF423FBA25A00473EC3 /* AppDelegate.swift */,
 				1840DCF623FBA25A00473EC3 /* SceneDelegate.swift */,
+				185889F124081D1500E935BD /* Journal */,
 				1840DD6124038C7A00473EC3 /* Test */,
-				18508FDA24079ACD0041CE11 /* Map */,
 				18508FCF2406A0250041CE11 /* Ulities + Extension */,
 				18508FC624069D560041CE11 /* LoveTracker */,
 				1840DD5823FEDE1B00473EC3 /* FoodTracker */,
@@ -222,12 +230,17 @@
 			path = "Ulities + Extension";
 			sourceTree = "<group>";
 		};
-		18508FDA24079ACD0041CE11 /* Map */ = {
+		185889F124081D1500E935BD /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				18508FDB24079AF30041CE11 /* MapViewController.swift */,
+				18588A0D2408263700E935BD /* Route.gpx */,
+				18588A08240825C600E935BD /* Location.swift */,
+				18588A06240825C600E935BD /* LocationsStorage.swift */,
+				18588A07240825C600E935BD /* MapViewController.swift */,
+				18588A05240825C500E935BD /* PlacesTableViewController.swift */,
 			);
-			path = Map;
+			name = Journal;
+			path = "../../../../../Downloads/Journal materials/Journal starter/Journal";
 			sourceTree = "<group>";
 		};
 		5C061B9A03D7AE4301BB4272 /* Pods */ = {
@@ -337,6 +350,7 @@
 			files = (
 				1840DD0423FBA25C00473EC3 /* LaunchScreen.storyboard in Resources */,
 				1840DD1A23FBA4A600473EC3 /* GoogleService-Info.plist in Resources */,
+				18588A0E2408263700E935BD /* Route.gpx in Resources */,
 				1840DD2923FC32E500473EC3 /* Assets.xcassets 21-57-14-902.xcassets in Resources */,
 				1840DCFC23FBA25A00473EC3 /* Main.storyboard in Resources */,
 			);
@@ -446,19 +460,22 @@
 				1840DD2B23FC385F00473EC3 /* Shadow.swift in Sources */,
 				1840DD2423FBBC6F00473EC3 /* SignInViewController.swift in Sources */,
 				18508FD52406A0460041CE11 /* ExtensionDate.swift in Sources */,
-				18508FDC24079AF30041CE11 /* MapViewController.swift in Sources */,
 				1840DD6024038C3F00473EC3 /* Meal.swift in Sources */,
 				18508FD82406A0460041CE11 /* ExtensionhourlyDay.swift in Sources */,
 				1840DCFF23FBA25A00473EC3 /* _Project__BookFinder.xcdatamodeld in Sources */,
+				18588A0C240825C600E935BD /* Location.swift in Sources */,
 				1840DD2723FBC88600473EC3 /* SignUpViewController.swift in Sources */,
 				18508FCD24069D8A0041CE11 /* Infor.swift in Sources */,
 				18508FCB24069D8A0041CE11 /* MainSlideMenuViewController.swift in Sources */,
 				1840DCF523FBA25A00473EC3 /* AppDelegate.swift in Sources */,
+				18588A09240825C600E935BD /* PlacesTableViewController.swift in Sources */,
 				18508FCE24069D8A0041CE11 /* CropAreaImageView.swift in Sources */,
+				18588A0B240825C600E935BD /* MapViewController.swift in Sources */,
 				1840DD2023FBBC0700473EC3 /* Utilities.swift in Sources */,
 				18508FD92406A0460041CE11 /* ExtensionUIimageView.swift in Sources */,
 				1840DCF723FBA25A00473EC3 /* SceneDelegate.swift in Sources */,
 				1840DD2123FBBC0700473EC3 /* Constants.swift in Sources */,
+				18588A0A240825C600E935BD /* LocationsStorage.swift in Sources */,
 				1840DD5A23FEDE5E00473EC3 /* AddEditFoodTrackerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
