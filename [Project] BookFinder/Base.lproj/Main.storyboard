@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IuX-58-QsG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -7,21 +7,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Panda-->
+        <!--Map View Controller-->
         <scene sceneID="jz2-sG-Zm5">
             <objects>
-                <viewController id="XcT-bV-Tdy" sceneMemberID="viewController">
+                <viewController id="XcT-bV-Tdy" customClass="MapViewController" customModule="_Project__BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugq-uA-kL1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-XB-mNE">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-Cm-XCu">
+                                <rect key="frame" x="112" y="587" width="151" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="XcT-bV-Tdy" eventType="valueChanged" id="Aq8-G8-5va"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V6D-XB-mNE" firstAttribute="top" secondItem="93h-zJ-Hrz" secondAttribute="top" id="FMt-28-aZa"/>
+                            <constraint firstItem="93h-zJ-Hrz" firstAttribute="bottom" secondItem="V6D-XB-mNE" secondAttribute="bottom" id="VjD-dH-2UG"/>
+                            <constraint firstItem="93h-zJ-Hrz" firstAttribute="trailing" secondItem="V6D-XB-mNE" secondAttribute="trailing" id="e8g-bh-6MK"/>
+                            <constraint firstItem="V6D-XB-mNE" firstAttribute="leading" secondItem="93h-zJ-Hrz" secondAttribute="leading" id="vGN-sc-hwT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="93h-zJ-Hrz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Panda" image="heart.circle" catalog="system" selectedImage="heart.circle.fill" id="E61-gv-UUd"/>
+                    <navigationItem key="navigationItem" id="ove-Fu-lKG"/>
+                    <connections>
+                        <outlet property="mapView" destination="V6D-XB-mNE" id="Ts5-QB-UjQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5O-H0-H9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="839"/>
+            <point key="canvasLocation" x="2804" y="838.83058470764627"/>
         </scene>
         <!--Home Tab Bar Controller View Controller-->
         <scene sceneID="HrJ-QS-tME">
@@ -34,8 +59,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="lL9-EX-VIT" kind="relationship" relationship="viewControllers" id="kTA-T7-Pke"/>
-                        <segue destination="XcT-bV-Tdy" kind="relationship" relationship="viewControllers" id="INc-fQ-alO"/>
                         <segue destination="Lmx-Fv-l6J" kind="relationship" relationship="viewControllers" id="BOQ-Kj-CL3"/>
+                        <segue destination="UOc-Uh-3ei" kind="relationship" relationship="viewControllers" id="INc-fQ-alO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyG-Ri-1dp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -401,11 +426,11 @@
             </objects>
             <point key="canvasLocation" x="138" y="839"/>
         </scene>
-        <!--Food Tracker-->
+        <!--Lovely Meal-->
         <scene sceneID="tth-Ui-4LB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lmx-Fv-l6J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Food Tracker" image="star.circle" catalog="system" selectedImage="star.circle.fill" id="kr9-FM-05M"/>
+                    <tabBarItem key="tabBarItem" title="Lovely Meal" image="meal" selectedImage="meal" id="kr9-FM-05M"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K51-xy-ZoU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -490,8 +515,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I0F-Kq-SCh">
-                                <rect key="frame" x="16" y="64" width="343" height="420"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="I0F-Kq-SCh">
+                                <rect key="frame" x="16" y="64" width="343" height="414"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-5U-0ii">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
@@ -508,8 +533,8 @@
                                             <outletCollection property="gestureRecognizers" destination="Tmx-v8-E8f" appends="YES" id="0y7-vU-VfF"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-Is-hzb" customClass="RatingControl" customModule="_Project__BookFinder" customModuleProvider="target">
-                                        <rect key="frame" x="45.5" y="370" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Nc-Is-hzb" customClass="RatingControl" customModule="_Project__BookFinder" customModuleProvider="target">
+                                        <rect key="frame" x="45.5" y="370" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -571,12 +596,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTq-Nw-hWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3871" y="531"/>
+            <point key="canvasLocation" x="3847" y="611"/>
         </scene>
         <!--Title-->
         <scene sceneID="09f-F8-Fwg">
             <objects>
-                <viewController id="lL9-EX-VIT" customClass="MainSlideMenuViewController" customModule="DemoAppBeenLoveMemoryLite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lL9-EX-VIT" customClass="MainSlideMenuViewController" customModule="_Project__BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="26D-hL-oKI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -603,7 +628,7 @@
                                             <action selector="menuBtn:" destination="lL9-EX-VIT" eventType="touchUpInside" id="8pU-e8-sY6"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Người A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm2-AV-pfL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm2-AV-pfL">
                                         <rect key="frame" x="19" y="341" width="150" height="82"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="G7k-ZN-xEQ"/>
@@ -619,7 +644,7 @@
                                             <action selector="menuBtnGirlName:" destination="lL9-EX-VIT" eventType="touchUpInside" id="DbE-jx-kgS"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Người B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndh-lJ-CrR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name B" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndh-lJ-CrR">
                                         <rect key="frame" x="207" y="341" width="150" height="82"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="5TL-Mv-KOp"/>
@@ -662,8 +687,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="q62-Bq-k3l">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Năm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlx-ha-CZH">
-                                                                <rect key="frame" x="7" y="57" width="36" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlx-ha-CZH">
+                                                                <rect key="frame" x="8" y="57" width="34" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -676,8 +701,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="NVu-Oi-Ojg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Tháng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jc-zd-zgu">
-                                                                <rect key="frame" x="0.5" y="57" width="49" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Mon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jc-zd-zgu">
+                                                                <rect key="frame" x="8" y="57" width="34" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -690,8 +715,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="5aC-uf-u2w">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Tuần" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kl-ht-55b">
-                                                                <rect key="frame" x="6.5" y="57" width="37.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kl-ht-55b">
+                                                                <rect key="frame" x="3.5" y="57" width="43" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -704,8 +729,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-PK-tjh">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Ngày" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAX-BV-9SG">
-                                                                <rect key="frame" x="5" y="57" width="40" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAX-BV-9SG">
+                                                                <rect key="frame" x="10.5" y="57" width="29.5" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -718,8 +743,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="kP4-cZ-nYx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Giờ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56h-nS-T51">
-                                                                <rect key="frame" x="12" y="57" width="26.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56h-nS-T51">
+                                                                <rect key="frame" x="6" y="57" width="38" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -732,8 +757,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="JLw-7e-Kyy">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Phút" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-Ng-Kfs">
-                                                                <rect key="frame" x="7.5" y="57" width="35.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot9-Ng-Kfs">
+                                                                <rect key="frame" x="11" y="57" width="28" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -746,8 +771,8 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-like-1" translatesAutoresizingMaskIntoConstraints="NO" id="3b0-Ko-daE">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Giây" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-u3-tWW">
-                                                                <rect key="frame" x="8" y="57" width="34" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocC-u3-tWW">
+                                                                <rect key="frame" x="10.5" y="57" width="29" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -843,14 +868,14 @@
                                             <constraint firstAttribute="width" secondItem="jUR-E7-eo9" secondAttribute="height" multiplier="1:1" id="9GX-ma-b7W"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:rjs-Wf-9T8:image" translatesAutoresizingMaskIntoConstraints="NO" id="rjs-Wf-9T8" customClass="DesignableUI" customModule="DemoAppBeenLoveMemoryLite" customModuleProvider="target">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:rjs-Wf-9T8:image" translatesAutoresizingMaskIntoConstraints="NO" id="rjs-Wf-9T8" customClass="DesignableUI" customModule="_Project__BookFinder" customModuleProvider="target">
                                         <rect key="frame" x="47" y="262" width="93.5" height="94"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rjs-Wf-9T8" secondAttribute="height" multiplier="1:1" id="ozH-vv-Dgl"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:rjs-Wf-9T8:image" translatesAutoresizingMaskIntoConstraints="NO" id="AmZ-xK-Xod" customClass="DesignableUI" customModule="DemoAppBeenLoveMemoryLite" customModuleProvider="target">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:rjs-Wf-9T8:image" translatesAutoresizingMaskIntoConstraints="NO" id="AmZ-xK-Xod" customClass="DesignableUI" customModule="_Project__BookFinder" customModuleProvider="target">
                                         <rect key="frame" x="234.5" y="262" width="94" height="94"/>
                                         <gestureRecognizers/>
                                         <constraints>
@@ -958,7 +983,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NRO-cA-zJK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Love" image="novel" selectedImage="novel" springLoaded="YES" id="Xh3-xm-RjC"/>
+                    <tabBarItem key="tabBarItem" title="Anniversary" image="novel" selectedImage="novel" springLoaded="YES" id="Xh3-xm-RjC"/>
                     <navigationItem key="navigationItem" title="Title" id="cJW-Yt-QVU"/>
                     <connections>
                         <outlet property="btnTapgetNameA" destination="gRH-a4-17a" id="hCW-uM-WMs"/>
@@ -996,7 +1021,7 @@
         <!--Date Picker View Controller-->
         <scene sceneID="nul-hx-bat">
             <objects>
-                <viewController id="XLc-qQ-ZhD" customClass="DatePickerViewController" customModule="DemoAppBeenLoveMemoryLite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XLc-qQ-ZhD" customClass="DatePickerViewController" customModule="_Project__BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNJ-Na-0aG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1074,6 +1099,25 @@
             </objects>
             <point key="canvasLocation" x="1797.5999999999999" y="1788.7556221889056"/>
         </scene>
+        <!--Couple Map-->
+        <scene sceneID="jGb-RX-Dk4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UOc-Uh-3ei" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Couple Map" image="maps" selectedImage="maps" id="E61-gv-UUd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YRg-fE-A1C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XcT-bV-Tdy" kind="relationship" relationship="rootViewController" id="sqo-4Z-TzG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GkF-N6-zX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864.8" y="838.83058470764627"/>
+        </scene>
     </scenes>
     <resources>
         <image name="169623 copy" width="750" height="1334"/>
@@ -1081,8 +1125,6 @@
         <image name="Kraken" width="800" height="600"/>
         <image name="Love1" width="48" height="48"/>
         <image name="defaultPhoto" width="540" height="540"/>
-        <image name="heart.circle" catalog="system" width="64" height="60"/>
-        <image name="heart.circle.fill" catalog="system" width="64" height="60"/>
         <image name="icons8-like-1" width="50" height="50"/>
         <image name="imageView:rjs-Wf-9T8:image" width="1000" height="666">
             <mutableData key="keyedArchiveRepresentation">
@@ -45618,13 +45660,12 @@ bwAosXEAKLFzACixfAAosYEAKLGHACixjwAosZEAKLGTACixlQAosZcAKMMDACjDCAAowxUAKMMYACjD
 JQAowyoAKMMyACjDNQAowzoAKMNCAAAAAAAABAEAAAAAAAAAUwAAAAAAAAAAAAAAAAAow0U
 </mutableData>
         </image>
+        <image name="maps" width="25" height="25"/>
+        <image name="meal" width="25" height="25"/>
         <image name="nhim copy" width="262.5" height="466.5"/>
         <image name="novel" width="25" height="25"/>
-        <image name="star.circle" catalog="system" width="64" height="60"/>
-        <image name="star.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jm5-QU-ypF"/>
-        <segue reference="jiE-Yd-U3B"/>
+        <segue reference="R1E-qa-loS"/>
     </inferredMetricsTieBreakers>
 </document>

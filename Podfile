@@ -19,6 +19,8 @@ target '[Project] BookFinder' do
   pod 'Firebase/Storage'
   pod "BmoImageLoader"
   pod 'Firebase/Database'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   target '[Project] BookFinderTests' do
     inherit! :search_paths
@@ -26,3 +28,6 @@ target '[Project] BookFinder' do
   end
 
 end
+
+
+#GoogleMap API key: AIzaSyDLXz4dsWq6-ZdqMAcddfQVPm-ycaIB3BY
