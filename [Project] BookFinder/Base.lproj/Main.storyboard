@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IuX-58-QsG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -557,6 +557,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="JXG-HT-BzR">
                             <connections>
                                 <action selector="cancel:" destination="2F6-Qk-fdt" id="Ya8-ud-bfb"/>
+                                <segue destination="Lmx-Fv-l6J" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="V0R-NY-CSW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="T72-pM-yqK">
@@ -587,6 +588,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6es-dL-4bK" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hMT-Xo-zoz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HjA-Li-Ziv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -598,7 +600,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTq-Nw-hWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3860" y="103"/>
+            <point key="canvasLocation" x="3809" y="692"/>
         </scene>
         <!--Title-->
         <scene sceneID="09f-F8-Fwg">
@@ -1105,7 +1107,7 @@
         <scene sceneID="34N-vD-KIo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3fl-tF-w8b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="search" id="Ngh-sF-ggC"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="maps" selectedImage="maps" id="Ngh-sF-ggC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ic-QT-z3k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1157,7 +1159,7 @@
         <!--Places-->
         <scene sceneID="7lX-PY-vWY">
             <objects>
-                <tableViewController title="Places" id="97H-HL-nbu" customClass="PlacesTableViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Places" id="97H-HL-nbu" customClass="PlacesTableViewController" customModule="_Project__BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qzm-bG-HQ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1203,7 +1205,7 @@
         <!--Map View Controller-->
         <scene sceneID="4mz-Lo-Koq">
             <objects>
-                <viewController id="KDv-7G-RA0" customClass="MapViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KDv-7G-RA0" customClass="MapViewController" customModule="_Project__BookFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gze-1z-iih">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45790,10 +45792,9 @@ JQAowyoAKMMyACjDNQAowzoAKMNCAAAAAAAABAEAAAAAAAAAUwAAAAAAAAAAAAAAAAAow0U
         <image name="nhim copy" width="262.5" height="466.5"/>
         <image name="novel" width="25" height="25"/>
         <image name="recents" width="16" height="16"/>
-        <image name="search" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jm5-QU-ypF"/>
-        <segue reference="jiE-Yd-U3B"/>
+        <segue reference="R1E-qa-loS"/>
+        <segue reference="V0R-NY-CSW"/>
     </inferredMetricsTieBreakers>
 </document>
